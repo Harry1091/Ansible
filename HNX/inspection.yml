@@ -19,7 +19,7 @@
           - "show configuration chassis | display set" #10
           - "show configuration interfaces ae0 | display set" #11
           - "show configuration interfaces irb | display set" #12     
-         - "show configuration interfaces lo0 | display set" #13  
+          - "show configuration interfaces lo0 | display set" #13  
           - "show configuration interfaces me0 | display set" #14
           - "show configuration snmp | display set" #15
           - "show configuration forwarding-options | display set" #16
