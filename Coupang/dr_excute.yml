@@ -1,5 +1,5 @@
 ---
-- name: Coupang_DR
+- name: DR_excute
   hosts: juniper
   gather_facts: no
   tasks:
