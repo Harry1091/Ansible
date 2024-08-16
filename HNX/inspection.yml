@@ -53,8 +53,8 @@
     - name: TACACS IP
       debug: 
         msg: >-
-          {% if '10.164.6.21' in rslt.results[1].stdout and 
-          '10.164.6.22' in rslt.results[1].stdout %}OK
+          {% if '90.164.6.21' in rslt.results[1].stdout and 
+          '90.164.6.22' in rslt.results[1].stdout %}OK
           {% else %}Not OK{% endif %}
     - name: Service ssh
       debug: 
@@ -74,16 +74,16 @@
     - name: accounting destination server
       debug: 
         msg: >-
-          {% if '10.164.6.21' in rslt.results[4].stdout and 
-          '10.164.6.22' in rslt.results[4].stdout %}OK
+          {% if '90.164.6.21' in rslt.results[4].stdout and 
+          '90.164.6.22' in rslt.results[4].stdout %}OK
           {% else %}Not OK{% endif %}
     - name: SYSLOG_emergency messages to all user
       debug: msg="{% if 'user * any emergency' in rslt.results[5].stdout %}OK{% else %}Not OK{% endif %}"
     - name: SYSLOG_remote server IP
       debug: 
         msg: >-
-          {% if '10.156.254.200' in rslt.results[5].stdout and 
-          '166.125.112.116' in rslt.results[5].stdout %}OK
+          {% if '90.73.254.200' in rslt.results[5].stdout and 
+          '150.44.112.116' in rslt.results[5].stdout %}OK
           {% else %}Not OK{% endif %}
     - name: SYSLOG_file messages
       debug: 
@@ -113,8 +113,8 @@
     - name: NTP_server IP
       debug: 
         msg: >-
-          {% if '166.125.7.177' in rslt.results[9].stdout and 
-          '166.125.7.178' in rslt.results[9].stdout %}OK
+          {% if '150.44.7.177' in rslt.results[9].stdout and 
+          '150.44.7.178' in rslt.results[9].stdout %}OK
           {% else %}Not OK{% endif %}
     - name: CHASSIS_default config
       debug: 
@@ -156,13 +156,13 @@
         msg: >-
           {% if 'Network_R' in rslt.results[15].stdout and
           'read-only' in rslt.results[15].stdout and
-          '166.125.3.0/24' in rslt.results[15].stdout and 
-          '166.125.19.0/24' in rslt.results[15].stdout and 
-          '10.156.26.0/24' in rslt.results[15].stdout and 
-          '10.156.253.0/24' in rslt.results[15].stdout and 
-          '10.156.254.0/24' in rslt.results[15].stdout and 
+          '150.44.3.0/24' in rslt.results[15].stdout and 
+          '150.44.19.0/24' in rslt.results[15].stdout and 
+          '90.73.26.0/24' in rslt.results[15].stdout and 
+          '90.73.253.0/24' in rslt.results[15].stdout and 
+          '90.73.254.0/24' in rslt.results[15].stdout and 
           '0.0.0.0/0 restrict' in rslt.results[15].stdout and 
-          'targets 10.156.254.200' in rslt.results[15].stdout %}OK
+          'targets 90.73.254.200' in rslt.results[15].stdout %}OK
           {% else %}Not OK{% endif %}
     - name: FROWARDING_storm control
       debug: 
@@ -181,7 +181,7 @@
     - name: FROWARDING_dhcp relay
       debug: 
         msg: >-
-          {% if '10.161.6.21' in rslt.results[16].stdout and
+          {% if '90.161.6.21' in rslt.results[16].stdout and
           'access-internal' in rslt.results[16].stdout and
           'irb.103' in rslt.results[16].stdout and          
           'active-server-group' in rslt.results[16].stdout %}OK
@@ -189,29 +189,29 @@
     - name: FIREWALL_ntp
       debug: 
         msg: >-
-          {% if '166.125.7.177/32' in rslt.results[17].stdout and
-          '166.125.7.178/32' in rslt.results[17].stdout and
+          {% if '150.44.7.177/32' in rslt.results[17].stdout and
+          '150.44.7.178/32' in rslt.results[17].stdout and
           'block-ntp' in rslt.results[17].stdout%}OK
           {% else %}Not OK{% endif %}
     - name: FIREWALL_ssh access
       debug: 
         msg: >-
-          {% if '166.125.3.81/32' in rslt.results[17].stdout and
-          '166.125.3.82/32' in rslt.results[17].stdout and
-          '10.37.201.21/32' in rslt.results[17].stdout and
-          '10.37.201.22/32' in rslt.results[17].stdout and
-          '10.37.201.23/32' in rslt.results[17].stdout and
-          '10.37.201.24/32' in rslt.results[17].stdout and
-          '10.158.201.21/32' in rslt.results[17].stdout and
-          '10.158.201.22/32' in rslt.results[17].stdout and
-          '10.158.201.23/32' in rslt.results[17].stdout and
-          '10.158.201.24/32' in rslt.results[17].stdout and
-          '10.156.253.40/32' in rslt.results[17].stdout and
-          '10.156.253.41/32' in rslt.results[17].stdout and
-          '10.156.253.42/32' in rslt.results[17].stdout and
-          '10.156.253.43/32' in rslt.results[17].stdout and
-          '10.156.253.44/32' in rslt.results[17].stdout and
-          '10.173.200.19/32' in rslt.results[17].stdout and
+          {% if '150.44.3.81/32' in rslt.results[17].stdout and
+          '150.44.3.82/32' in rslt.results[17].stdout and
+          '90.37.201.21/32' in rslt.results[17].stdout and
+          '90.37.201.22/32' in rslt.results[17].stdout and
+          '90.37.201.23/32' in rslt.results[17].stdout and
+          '90.37.201.24/32' in rslt.results[17].stdout and
+          '90.158.201.21/32' in rslt.results[17].stdout and
+          '90.158.201.22/32' in rslt.results[17].stdout and
+          '90.158.201.23/32' in rslt.results[17].stdout and
+          '90.158.201.24/32' in rslt.results[17].stdout and
+          '90.73.253.40/32' in rslt.results[17].stdout and
+          '90.73.253.41/32' in rslt.results[17].stdout and
+          '90.73.253.42/32' in rslt.results[17].stdout and
+          '90.73.253.43/32' in rslt.results[17].stdout and
+          '90.73.253.44/32' in rslt.results[17].stdout and
+          '90.173.200.19/32' in rslt.results[17].stdout and
           'block_SSH_access' in rslt.results[17].stdout%}OK
           {% else %}Not OK{% endif %}
     - name: FIREWALL_all permit
@@ -219,16 +219,16 @@
     - name: FIREWALL_virus acl
       debug: 
         msg: >-
-          {% if '10.237.2.115/32' in rslt.results[17].stdout and
-          '10.237.2.116/32' in rslt.results[17].stdout and
-          '10.230.1.43/32' in rslt.results[17].stdout and
-          '10.230.1.44/32' in rslt.results[17].stdout and
+          {% if '90.237.2.115/32' in rslt.results[17].stdout and
+          '90.237.2.116/32' in rslt.results[17].stdout and
+          '90.230.1.43/32' in rslt.results[17].stdout and
+          '90.230.1.44/32' in rslt.results[17].stdout and
           'FABDISK from destination-port 445' in rslt.results[17].stdout and
           '10 from destination-port 135' in rslt.results[17].stdout and
           '10 from destination-port 445' in rslt.results[17].stdout and
           '10 then discard' in rslt.results[17].stdout and
           '10 then count Discard_count' in rslt.results[17].stdout and
-          '10.173.200.19/32' in rslt.results[17].stdout and
+          '90.173.200.19/32' in rslt.results[17].stdout and
           '20 then accept' in rslt.results[17].stdout%}OK
           {% else %}Not OK{% endif %}
     - name: FIREWALL_virus acl temp
@@ -238,19 +238,19 @@
           'term 5 then accept' in rslt.results[17].stdout and
           'term 10 from ip-protocol icmp' in rslt.results[17].stdout and
           'term 10 then accept' in rslt.results[17].stdout and
-          '177.179.19.221/32' in rslt.results[17].stdout and
-          '177.179.19.222/32' in rslt.results[17].stdout and
-          '177.179.19.224/32' in rslt.results[17].stdout and
-          '166.125.38.100/32' in rslt.results[17].stdout and
-          '166.125.38.102/32' in rslt.results[17].stdout and
-          '166.125.38.103/32' in rslt.results[17].stdout and
-          '166.125.38.104/32' in rslt.results[17].stdout and
-          '166.125.38.105/32' in rslt.results[17].stdout and
-          '166.125.38.106/32' in rslt.results[17].stdout and
-          '10.158.150.0/24' in rslt.results[17].stdout and
-          '10.192.71.39/32' in rslt.results[17].stdout and
-          '10.192.71.40/32' in rslt.results[17].stdout and
-          '10.192.9.42/32' in rslt.results[17].stdout and
+          '200.179.19.221/32' in rslt.results[17].stdout and
+          '200.179.19.222/32' in rslt.results[17].stdout and
+          '200.179.19.224/32' in rslt.results[17].stdout and
+          '150.44.38.100/32' in rslt.results[17].stdout and
+          '150.44.38.102/32' in rslt.results[17].stdout and
+          '150.44.38.103/32' in rslt.results[17].stdout and
+          '150.44.38.104/32' in rslt.results[17].stdout and
+          '150.44.38.105/32' in rslt.results[17].stdout and
+          '150.44.38.106/32' in rslt.results[17].stdout and
+          '90.158.150.0/24' in rslt.results[17].stdout and
+          '90.192.71.39/32' in rslt.results[17].stdout and
+          '90.192.71.40/32' in rslt.results[17].stdout and
+          '90.192.9.42/32' in rslt.results[17].stdout and
           '20 then accept' in rslt.results[17].stdout and
           '30 then discard' in rslt.results[17].stdout%}OK
           {% else %}Not OK{% endif %}
