@@ -1,5 +1,5 @@
 ---
-- name: Coupang_DR_failback
+- name: DR_failback
   hosts: juniper
   gather_facts: no
   tasks:
