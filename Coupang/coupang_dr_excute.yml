@@ -1,0 +1,12 @@
+---
+- name: Coupang_DR
+  hosts: juniper
+  gather_facts: no
+  tasks:
+    - name: Disable_interface
+      juniper.device.config:
+        load: "set"
+        lines:
+          - "set interfaces ge-0/0/0 disable"
+          - "set interfaces ge-0/0/3 disable"
+          - "set interfaces ge-0/0/4 disable"

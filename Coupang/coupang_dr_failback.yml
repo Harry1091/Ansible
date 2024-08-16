@@ -1,0 +1,12 @@
+---
+- name: Coupang_DR_failback
+  hosts: juniper
+  gather_facts: no
+  tasks:
+    - name: Enable_interface
+      juniper.device.config:
+        load: "set"
+        lines:
+          - "delete interfaces ge-0/0/0 disable"
+          - "delete interfaces ge-0/0/3 disable"
+          - "delete interfaces ge-0/0/4 disable"
