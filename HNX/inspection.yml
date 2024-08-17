@@ -310,3 +310,9 @@
           'ecmp' in rslt.results[22].stdout and
           'load-balance per-packet' in rslt.results[22].stdout %}OK
           {% else %}Not OK{% endif %}
+
+    - name: Send result to Slack
+      slack:
+        token: "https://hooks.slack.com/services/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"
+        msg: "Playbook finished with result: {{ rslt.stdout }}"
+        channel: "#최적화-프로젝트"
