@@ -313,6 +313,6 @@
 
     - name: Send result to Slack
       slack:
-        token: "https://hooks.slack.com/services/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"
+        token: "https://hooks.slack.com/services/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"
         msg: "Playbook finished with result: {{ rslt.stdout }}"
         channel: "#최적화-프로젝트"
