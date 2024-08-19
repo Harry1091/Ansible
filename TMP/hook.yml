@@ -10,4 +10,4 @@
       slack:
         token: "https://hooks.slack.com/services/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"
         msg: "Playbook finished with result: {{ result.stdout }}"
-        channel: "#최적화-프로젝트"
+        channel: "#토이프로젝트"
