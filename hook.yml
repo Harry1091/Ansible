@@ -1,0 +1,31 @@
+---
+- name: Example playbook to send results to Slack
+  hosts: localhost
+  tasks:
+    - name: Run some task
+      command: echo "Hello, World!"
+      register: result
+      
+    - name: Send notification to Slack on failure
+      uri:
+        url: "https://hooks.slack.com/services/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"
+        method: POST
+        headers:
+          Content-Type: "application/json"
+        body: |
+          {
+            "text": "Task Test",
+            "attachments": [
+              {
+                "title": "Task Result",
+                "text": "TEST",
+                "color": "good"
+              }
+            ]
+          }
+        status_code: 200
+    # - name: Send result to Slack
+    #   slack:
+    #     token: "https://hooks.slack.com/services/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"
+    #     msg: "Playbook finished with result: {{ result.stdout }}"
+    #     #channel: "#토이프로젝트"
