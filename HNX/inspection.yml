@@ -310,6 +310,3 @@
           'ecmp' in rslt.results[22].stdout and
           'load-balance per-packet' in rslt.results[22].stdout %}OK
           {% else %}Not OK{% endif %}
-
-
-        channel: "#최적화-프로젝트"
