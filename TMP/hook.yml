@@ -3,7 +3,7 @@
   hosts: localhost
   gather_facts: no
   vars:
-    slack_webhook_url: "https://hooks.slack.com/services/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"  # Slack Webhook URL
+    slack_webhook_url: "https://hooks.slack.com/services/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"  # Slack Webhook URL
   tasks:
     - name: Run a command and register the output
       command: echo "This is a test message from Ansible"
