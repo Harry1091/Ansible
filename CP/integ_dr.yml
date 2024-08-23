@@ -4,11 +4,11 @@
   gather_facts: no
   tasks:
     - name: shutdown_juniper
-      include: CP/dr_excute.yml
+      include: https://github.com/Harry1091/Ansible/blob/main/CP/dr_excute.yml
 
 - name: Coupang_DR_Cisco
   hosts: cisco
   gather_facts: no
   tasks:
     - name: shutdown_cisco
-      include: CP/dr_excute_nxos.yml
+      include: https://github.com/Harry1091/Ansible/blob/main/CP/dr_excute_nxos.yml
