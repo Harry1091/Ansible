@@ -1,0 +1,21 @@
+---
+- name: Shutdown port 1/1 on Cisco Nexus switch
+  hosts: cisco
+  gather_facts: no
+  tasks:
+#    - name: Configure the interface to shutdown
+#      cisco.nxos.nxos_interface:
+#        name: Ethernet1/1
+#        admin_state: down
+#      register: result
+
+    - name: Input Check CLI
+      cisco.nxos.nxos_command:
+        commands:
+          - show version
+          - show run
+      register: config
+
+    - name: Print config
+      debug:
+        var: config
