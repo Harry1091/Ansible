@@ -16,12 +16,15 @@
   gather_facts: no
   tasks:
     - name: Configure the interface to shutdown
-      cisco.nxos.nxos_config:
-        lines:
-          - shutdown
-        parents:
-          - interface Ethernet1/1
-          #- interface Ethernet1/5
+      cisco.nxos.nxos_interfaces:
+        config:
+          - name: Ethernet1/1
+            description: Configured by Ansible
+            enabled: false
+          - name: Ethernet1/2
+            description: Configured by Ansible Network
+            enabled: false
+    state: merged
 
     - name: Input Check CLI
       cisco.nxos.nxos_command:
