@@ -15,17 +15,16 @@
   hosts: cisco
   gather_facts: no
   tasks:
-#    - name: Configure the interface to shutdown
-#      cisco.nxos.nxos_interface:
-#        name: Ethernet1/1
-#        admin_state: down
-#      register: result
+    - name: Configure the interface to shutdown
+      cisco.nxos.nxos_interface:
+        name: Ethernet1/1
+        admin_state: down
+      register: result
 
     - name: Input Check CLI
       cisco.nxos.nxos_command:
         commands:
-          - show version
-          - show run
+          - show interface status
       register: config
 
     - name: Print config
