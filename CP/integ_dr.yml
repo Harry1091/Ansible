@@ -10,7 +10,7 @@
           - "set interfaces ge-0/0/0 disable"
           - "set interfaces ge-0/0/3 disable"
           - "set interfaces ge-0/0/4 disable"
----
+#---
 - name: Shutdown port 1/1 on Cisco Nexus switch
   hosts: cisco
   gather_facts: no
