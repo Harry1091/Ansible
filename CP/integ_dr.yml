@@ -16,11 +16,10 @@
   gather_facts: no
   tasks:
     - name: Configure the interface to shutdown
-      cisco.nxos.nxos_command:
-        commands:
-          - interface Ethernet1/1
+      cisco.nxos.nxos_config:
+        lines:
           - shutdown
-      register: result
+        parents: interface Ethernet1/1
 
     - name: Input Check CLI
       cisco.nxos.nxos_command:
