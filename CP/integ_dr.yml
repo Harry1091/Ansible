@@ -21,7 +21,7 @@
           - shutdown
         parents:
           - interface Ethernet1/1
-          - interface Ethernet1/5
+          #- interface Ethernet1/5
 
     - name: Input Check CLI
       cisco.nxos.nxos_command:
