@@ -20,4 +20,4 @@
       
     - name: Print config
       debug:
-        var: config | grep 1/1
+        var: config
