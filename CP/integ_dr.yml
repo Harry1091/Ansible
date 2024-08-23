@@ -1,0 +1,14 @@
+---
+- name: Coupang_DR_Juniper
+  hosts: juniper
+  gather_facts: no
+  tasks:
+    - name: shutdown_juniper
+      include: dr_excute.yml
+
+- name: Coupang_DR_Cisco
+  hosts: cisco
+  gather_facts: no
+  tasks:
+    - name: shutdown_cisco
+      include: dr_excute_nxos.yml
