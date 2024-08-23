@@ -1,13 +1,23 @@
 ---
-- name: Example playbook to send results to Slack
+- name: Send stdout to Slack
   hosts: localhost
+  gather_facts: no
+  vars:
+    slack_webhook_url: "https://hooks.slack.com/services/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"  # Slack Webhook URL
   tasks:
-    - name: Run some task
-      command: echo "Hello, World!"
-      register: result
+    - name: Run a command and register the output
+      command: echo "This is a test message from Ansible"
+      register: command_output
 
-    - name: Send result to Slack
-      slack:
-        token: "https://hooks.slack.com/services/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"
-        msg: "Playbook finished with result: {{ result.stdout }}"
-        #channel: "#토이프로젝트"
+    - name: Send stdout to Slack
+      uri:
+        url: "{{ slack_webhook_url }}"
+        method: POST
+        headers:
+          Content-Type: "application/json"
+        body: |
+          {
+            "text": "Command Output: {{ command_output.stdout }}"
+          }
+        body_format: json
+      delegate_to: localhost
