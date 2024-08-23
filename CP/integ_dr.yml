@@ -24,7 +24,7 @@
           - name: Ethernet1/2
             description: Configured by Ansible Network
             enabled: false
-    state: merged
+        state: merged
 
     - name: Input Check CLI
       cisco.nxos.nxos_command:
